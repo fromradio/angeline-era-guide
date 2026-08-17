@@ -8,7 +8,7 @@ An unofficial bilingual (English / 简体中文) fan guide site for **Angeline E
 
 - Vite 5 + React 18 (TypeScript)
 - Tailwind CSS 3.4
-- React Router DOM 6 (`HashRouter`)
+- React Router DOM 6 (`BrowserRouter`)
 - Lucide React icons
 - Deployed on Vercel (see `vercel.json`)
 
@@ -26,7 +26,13 @@ npm run build    # outputs to dist/
 npm run preview  # preview the production build locally
 ```
 
-Deploy to Vercel: import this repository, keep the default Vite preset, and deploy. `vercel.json` already rewrites all routes to `index.html`. Since the app uses `HashRouter`, deep links work on any static host even without the rewrite.
+Deploy to Vercel: import this repository, keep the default Vite preset, and deploy. `vercel.json` rewrites all routes to `index.html`, so the `BrowserRouter` deep links (`/world`, `/bosses`, …) work on Vercel. Vercel Analytics is wired in via `@vercel/analytics`.
+
+## SEO
+
+- `public/sitemap.xml` lists all 8 routes; `public/robots.txt` points crawlers to it.
+- `index.html` carries description / keywords / canonical / Open Graph / Twitter Card meta plus the Google Search Console verification tag.
+- Each page sets its own `document.title` (per language) through `src/hooks/usePageTitle.ts`.
 
 ## 中英双语切换说明
 

@@ -1,4 +1,4 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { LanguageProvider } from '@/i18n/LanguageContext'
 import Layout from '@/components/Layout'
 import HomePage from '@/pages/Home'
@@ -13,7 +13,7 @@ import AboutPage from '@/pages/About'
 export default function App() {
   return (
     <LanguageProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
@@ -27,7 +27,7 @@ export default function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </LanguageProvider>
   )
 }

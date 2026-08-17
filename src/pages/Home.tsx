@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { usePageTitle } from '@/hooks/usePageTitle'
 import { HOME_BANNER } from '@/data/gameData'
 
 const QUICK_CARDS = [
@@ -24,6 +25,7 @@ const QUICK_CARDS = [
 
 export default function HomePage() {
   const { t } = useLanguage()
+  usePageTitle('')
 
   return (
     <div>

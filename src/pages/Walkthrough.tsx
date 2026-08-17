@@ -1,5 +1,6 @@
 import { Footprints } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { usePageTitle } from '@/hooks/usePageTitle'
 import { chapters } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 import BilingualText from '@/components/BilingualText'
@@ -7,6 +8,7 @@ import InferredNote from '@/components/InferredNote'
 
 export default function WalkthroughPage() {
   const { t, lang } = useLanguage()
+  usePageTitle(t.walkthrough.title)
 
   return (
     <div>

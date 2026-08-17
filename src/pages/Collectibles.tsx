@@ -1,5 +1,6 @@
 import { MapPin, CheckCircle2, Tag } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { usePageTitle } from '@/hooks/usePageTitle'
 import { collectibles } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 import Screenshot from '@/components/Screenshot'
@@ -8,6 +9,7 @@ import InferredNote from '@/components/InferredNote'
 
 export default function CollectiblesPage() {
   const { t, lang } = useLanguage()
+  usePageTitle(t.collectibles.title)
 
   return (
     <div>

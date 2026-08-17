@@ -1,10 +1,12 @@
 import { Gamepad2, Users, Trophy, ScrollText, CalendarDays, Star, Clock, ThumbsUp } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { usePageTitle } from '@/hooks/usePageTitle'
 import { ABOUT_IMAGE } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 
 export default function AboutPage() {
   const { t, lang } = useLanguage()
+  usePageTitle(t.about.title)
 
   return (
     <div>
