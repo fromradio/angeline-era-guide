@@ -31,6 +31,7 @@ export const translations = {
       communitySource: '[Source: Steam Community Discussion]',
       unverified: '[Unverified - community report]',
       exploring: 'Exploring…',
+      faq: 'FAQ',
       backToTop: 'Back to top',
       footer:
         'Unofficial fan guide. Angeline Era © Analgesic Productions. Not affiliated with the developers.',
@@ -132,6 +133,7 @@ export const translations = {
       communitySource: '[来源：Steam 社区讨论]',
       unverified: '[未经验证——社区传闻]',
       exploring: '探索中…',
+      faq: '常见问题',
       backToTop: '回到顶部',
       footer: '非官方玩家攻略。《Angeline Era》版权归 Analgesic Productions 所有，本站与开发商无关联。',
       menu: '菜单',

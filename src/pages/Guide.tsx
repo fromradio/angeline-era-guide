@@ -5,13 +5,28 @@ import { firstHourTips, stuckPoints, abilityPriority } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 import BilingualText from '@/components/BilingualText'
 import InferredNote from '@/components/InferredNote'
+import JsonLd from '@/components/JsonLd'
 
 export default function GuidePage() {
   const { t, lang } = useLanguage()
   usePageTitle(t.guide.title)
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: stuckPoints.map((sp) => ({
+      '@type': 'Question',
+      name: lang === 'zh' ? sp.problem.zh : sp.problem.en,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: lang === 'zh' ? sp.solution.zh : sp.solution.en,
+      },
+    })),
+  }
+
   return (
     <div>
+      <JsonLd data={faqJsonLd} />
       <SectionHeader title={t.guide.title} subtitle={t.guide.subtitle} />
 
       {/* First 5 hours */}

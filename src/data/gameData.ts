@@ -757,3 +757,105 @@ export const abilityPriority: GuideTip[] = [
   },
 ]
 
+
+/* ------------------------------------------------------------------ */
+/* FAQ data — question-style long-tail entries, mirrored in JSON-LD   */
+/* ------------------------------------------------------------------ */
+
+export interface Faq {
+  q: Bilingual
+  a: Bilingual
+}
+
+export const homeFaqs: Faq[] = [
+  {
+    q: { en: 'What is Bumpslash combat in Angeline Era?', zh: '《Angeline Era》的碰撞斩是什么？' },
+    a: {
+      en: 'Bumpslash is the game’s core combat system: you walk into enemies to attack automatically — there is no attack button. Your approach angle and contact point decide whether you deal or take damage, and bumping an enemy into a wall scores a critical hit plus stun.',
+      zh: '碰撞斩是游戏的核心战斗系统：走向敌人即可自动攻击——没有攻击键。你的接近角度与接触点决定了是你伤敌还是敌伤你；把敌人撞向墙壁还能造成暴击并眩晕。',
+    },
+  },
+  {
+    q: { en: 'How long does it take to beat Angeline Era?', zh: '《Angeline Era》通关要多久？' },
+    a: {
+      en: 'An average first playthrough takes 20–30 hours. Rushed runs can finish in 15–16 hours, while thorough exploration can pass 30. A boss rush mode unlocks after the credits.',
+      zh: '首次通关平均 20–30 小时。速通约 15–16 小时，充分探索可超过 30 小时。通关后还会解锁 Boss 连战模式。',
+    },
+  },
+  {
+    q: { en: 'Is Angeline Era a linear game?', zh: '《Angeline Era》是线性游戏吗？' },
+    a: {
+      en: 'No. It is deliberately non-linear: you explore a vast, unmarked overworld and search map squares to reveal hidden levels. There is no fixed route — clearing any level opens paths to nearby squares.',
+      zh: '不是。本作刻意采用非线性设计：你在一张广袤无标记的大世界地图上搜索格子来发现隐藏关卡。没有固定路线——通关任意关卡都会打通邻近格子的道路。',
+    },
+  },
+  {
+    q: { en: 'What are Bicones in Angeline Era?', zh: '《Angeline Era》里的双锥是什么？' },
+    a: {
+      en: 'Bicones are nine magical artifacts scattered across the land of Era. Collecting all nine is required to breach the storm around Throne, the Angels’ crashed mothership, and finish the story.',
+      zh: '双锥是散布在纪元国各地的九枚魔法秘宝。集齐九枚才能突破天使坠毁母舰王座号周围的风暴，走完整个故事。',
+    },
+  },
+]
+
+export const bossFaqs: Faq[] = [
+  {
+    q: { en: 'How do I beat the Gun-wielding Fae boss?', zh: '持枪妖精 Boss 怎么打？' },
+    a: {
+      en: 'His arena works like Pong: a paddle bounces bombs between you and him. Dodge his gunfire, clear his minions, and bump the paddle so the bombs explode on his side of the arena.',
+      zh: '他的场地像一场弹球游戏：球拍在你和他之间反弹炸弹。躲开枪击、清理小怪，并撞击球拍让炸弹在他那一侧爆炸。',
+    },
+  },
+  {
+    q: { en: 'How do I beat swarm bosses in Angeline Era?', zh: '群战型 Boss 怎么打？' },
+    a: {
+      en: 'Control the crowd before committing to the boss: kite minions through landmines, clear packs with grenades, and double-jump over the densest bullet patterns.',
+      zh: '先控场再输出 Boss：用地雷放风筝清小怪，用手雷炸成群敌人，并用二段跳越过最密集的弹幕。',
+    },
+  },
+  {
+    q: { en: 'What is the best way to damage duel bosses?', zh: '对决型 Boss 怎么输出最有效？' },
+    a: {
+      en: 'Circle instead of charging, strike from off-angles, and bump the boss into walls — a wall-bump critical hit plus stun is your biggest damage window.',
+      zh: '绕圈而不是直冲，从斜向切入攻击，并把 Boss 撞向墙壁——撞墙暴击加眩晕是你最大的输出窗口。',
+    },
+  },
+  {
+    q: { en: 'How do I unlock boss rush mode in Angeline Era?', zh: '《Angeline Era》的 Boss 连战模式怎么解锁？' },
+    a: {
+      en: 'Boss rush mode unlocks after you finish the main story — collect the nine Bicones, breach the storm and complete the game.',
+      zh: '通关主线后解锁：集齐九枚双锥、突破风暴并完成游戏即可。',
+    },
+  },
+]
+
+export const collectibleFaqs: Faq[] = [
+  {
+    q: { en: 'Where do I find all nine Bicones?', zh: '九枚双锥都在哪里找？' },
+    a: {
+      en: 'Bicones are hidden in levels across the overworld. Search unmarked map squares to reveal levels, then clear them — the game never marks their locations for you.',
+      zh: '双锥藏在大世界各处的关卡里。搜索无标记的地图格子来发现关卡并通关——游戏不会替你做标记。',
+    },
+  },
+  {
+    q: { en: 'How do I level up in Angeline Era?', zh: '《Angeline Era》怎么升级？' },
+    a: {
+      en: 'Every level you clear awards a Scale, and Scales level Tets up. Returns diminish after level 11, so grinding cannot carry you — artifacts and technique matter more.',
+      zh: '每通关一个关卡都会获得一枚鳞片，鳞片用于提升特茨的等级。11 级后收益递减，刷级无法碾压游戏——秘宝与技巧更重要。',
+    },
+  },
+  {
+    q: { en: 'How do I heal in Angeline Era?', zh: '《Angeline Era》怎么回血？' },
+    a: {
+      en: 'Save points do not heal. Buy food in town shops and eat it between fights — but food expires into compost if you hoard it. On lower difficulties enemies also drop healing orbs.',
+      zh: '存档点不回血。在城镇商店购买食物并在战斗间隙使用——但囤积不用会变质成堆肥。较低难度下敌人也会掉落治疗光球。',
+    },
+  },
+  {
+    q: { en: 'Where are the hidden artifacts in Angeline Era?', zh: '《Angeline Era》的隐藏秘宝在哪里？' },
+    a: {
+      en: 'Artifacts like the block-summoning device and the water bubble are tucked away in dungeon side paths and behind hazard gauntlets. Explore off the main route and revisit old areas with new tools.',
+      zh: '方块召唤装置、渡水气泡等秘宝藏在迷宫支线和机关试炼之后。多走主线之外的岔路，并在获得新工具后重访旧区域。',
+    },
+  },
+]

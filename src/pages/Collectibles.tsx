@@ -1,11 +1,12 @@
 import { MapPin, CheckCircle2, Tag } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
 import { usePageTitle } from '@/hooks/usePageTitle'
-import { collectibles } from '@/data/gameData'
+import { collectibles, collectibleFaqs } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 import Screenshot from '@/components/Screenshot'
 import BilingualText, { DualName } from '@/components/BilingualText'
 import InferredNote from '@/components/InferredNote'
+import FaqSection from '@/components/FaqSection'
 
 export default function CollectiblesPage() {
   const { t, lang } = useLanguage()
@@ -57,6 +58,8 @@ export default function CollectiblesPage() {
           </article>
         ))}
       </div>
+
+      <FaqSection faqs={collectibleFaqs} />
 
       <InferredNote />
     </div>

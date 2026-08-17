@@ -12,7 +12,9 @@ import {
 } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
 import { usePageTitle } from '@/hooks/usePageTitle'
-import { HOME_BANNER } from '@/data/gameData'
+import { HOME_BANNER, homeFaqs } from '@/data/gameData'
+import FaqSection from '@/components/FaqSection'
+import JsonLd from '@/components/JsonLd'
 
 const QUICK_CARDS = [
   { to: '/world', icon: Map, key: 'world' },
@@ -27,8 +29,20 @@ export default function HomePage() {
   const { t } = useLanguage()
   usePageTitle('')
 
+  const siteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Angeline Era Guide',
+    alternateName: 'Angeline Era 攻略站',
+    url: 'https://app-theta-one-56.vercel.app/',
+    inLanguage: ['en', 'zh-CN'],
+    description:
+      'Unofficial bilingual fan guide for Angeline Era — world, abilities, bosses, collectibles and walkthrough.',
+  }
+
   return (
     <div>
+      <JsonLd data={siteJsonLd} />
       {/* Banner */}
       <section className="glow-card relative mb-10 overflow-hidden">
         <div className="relative h-64 sm:h-80">
@@ -83,6 +97,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <FaqSection faqs={homeFaqs} />
     </div>
   )
 }

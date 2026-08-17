@@ -1,11 +1,12 @@
 import { MapPin, Target, ShieldAlert, Swords, Sparkles } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
 import { usePageTitle } from '@/hooks/usePageTitle'
-import { bosses } from '@/data/gameData'
+import { bosses, bossFaqs } from '@/data/gameData'
 import SectionHeader from '@/components/SectionHeader'
 import Screenshot from '@/components/Screenshot'
 import BilingualText, { DualName } from '@/components/BilingualText'
 import InferredNote from '@/components/InferredNote'
+import FaqSection from '@/components/FaqSection'
 
 export default function BossesPage() {
   const { t, lang } = useLanguage()
@@ -83,6 +84,8 @@ export default function BossesPage() {
           </article>
         ))}
       </div>
+
+      <FaqSection faqs={bossFaqs} />
 
       <InferredNote />
     </div>
