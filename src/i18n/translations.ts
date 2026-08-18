@@ -37,6 +37,7 @@ export const translations = {
         'Unofficial fan guide. Angeline Era © Analgesic Productions. Not affiliated with the developers.',
       menu: 'Menu',
       close: 'Close',
+      privacy: 'Privacy Policy',
     },
     home: {
       title: 'Angeline Era Guide',
@@ -103,6 +104,36 @@ export const translations = {
       disclaimerBody:
         'This is an unofficial, fan-made guide. All game names, artwork and trademarks belong to Analgesic Productions. Screenshots on this site are official images from the Steam store page, © Analgesic Productions, used for non-commercial reference. Guide content is based on the official Steam page and published reviews, rewritten in our own words; because the game is non-linear, individual experiences may differ.',
     },
+    privacy: {
+      title: 'Privacy Policy',
+      subtitle: 'How this site handles data — short version: we collect almost nothing.',
+      sections: [
+        {
+          heading: 'What we store',
+          body: 'This site stores your language preference (English or 中文) in your browser’s localStorage so the site opens in your chosen language on your next visit. This data never leaves your device and is never transmitted to us.',
+        },
+        {
+          heading: 'Cookies and third-party advertising',
+          body: 'We use Google AdSense to display ads. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this or other websites. Google’s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet. You may opt out of personalised advertising by visiting Google Ads Settings (https://adssettings.google.com). You can also opt out of third-party vendors’ use of cookies for personalised advertising at https://www.aboutads.info/choices.',
+        },
+        {
+          heading: 'Analytics',
+          body: 'We use Vercel Web Analytics to understand aggregate traffic (page views and referrers). Vercel Analytics is privacy-friendly: it does not use cookies and does not collect personally identifiable information.',
+        },
+        {
+          heading: 'Third-party links',
+          body: 'This site links to third-party websites such as Steam. We are not responsible for the content or privacy practices of those sites.',
+        },
+        {
+          heading: 'Changes to this policy',
+          body: 'If this policy changes, the updated version will be posted on this page with a revised date.',
+        },
+        {
+          heading: 'Contact',
+          body: 'Questions about this policy? Open an issue on our GitHub repository: github.com/fromradio/angeline-era-guide.',
+        },
+      ],
+    },
   },
   zh: {
     nav: {
@@ -138,6 +169,7 @@ export const translations = {
       footer: '非官方玩家攻略。《Angeline Era》版权归 Analgesic Productions 所有，本站与开发商无关联。',
       menu: '菜单',
       close: '关闭',
+      privacy: '隐私政策',
     },
     home: {
       title: 'Angeline Era 攻略站',
@@ -196,6 +228,36 @@ export const translations = {
       disclaimer: '本站声明',
       disclaimerBody:
         '本站为非官方玩家自制攻略。所有游戏名称、美术素材与商标均归 Analgesic Productions 所有。本站截图来自 Steam 商店页官方图片，版权归 Analgesic Productions 所有，仅作非商业参考用途。攻略内容基于 Steam 官方页面与已发布评测，以我们自己的语言重新组织；由于游戏采用非线性设计，不同玩家的体验可能有所差异。',
+    },
+    privacy: {
+      title: '隐私政策',
+      subtitle: '本站如何处理数据——简短版：我们几乎不收集任何数据。',
+      sections: [
+        {
+          heading: '我们存储什么',
+          body: '本站仅将您的语言偏好（中文或 English）保存在浏览器的 localStorage 中，以便下次访问时自动使用您选择的语言。该数据不会离开您的设备，也不会传输给我们。',
+        },
+        {
+          heading: 'Cookie 与第三方广告',
+          body: '本站使用 Google AdSense 展示广告。包括 Google 在内的第三方供应商会使用 Cookie，根据您此前对本网站或其他网站的访问记录来投放广告。Google 对广告 Cookie 的使用使其及其合作伙伴能够根据您对本站和/或互联网上其他网站的访问情况向您投放广告。您可以访问 Google 广告设置（https://adssettings.google.com）停用个性化广告，也可以访问 https://www.aboutads.info/choices 停用第三方供应商用于个性化广告的 Cookie。',
+        },
+        {
+          heading: '统计分析',
+          body: '本站使用 Vercel Web Analytics 了解汇总的访问情况（页面浏览量与来源）。Vercel Analytics 注重隐私：不使用 Cookie，也不收集任何可识别个人身份的信息。',
+        },
+        {
+          heading: '第三方链接',
+          body: '本站包含指向 Steam 等第三方网站的链接。我们不对这些网站的内容或隐私政策负责。',
+        },
+        {
+          heading: '政策变更',
+          body: '如本政策发生变更，更新后的版本将发布在本页面。',
+        },
+        {
+          heading: '联系我们',
+          body: '如对本政策有任何疑问，欢迎在我们的 GitHub 仓库提交 Issue：github.com/fromradio/angeline-era-guide。',
+        },
+      ],
     },
   },
 }

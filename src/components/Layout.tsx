@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
 import {
   Home,
   Map,
@@ -91,9 +91,15 @@ export default function Layout() {
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r border-dream-purple/15 bg-dream-bg/60 p-5 backdrop-blur-md lg:flex">
         <Brand />
         <NavLinks />
-        <p className="mt-auto px-1 pt-6 text-[11px] leading-relaxed text-dream-muted/70">
-          {t.common.footer}
-        </p>
+        <div className="mt-auto px-1 pt-6">
+          <p className="text-[11px] leading-relaxed text-dream-muted/70">{t.common.footer}</p>
+          <Link
+            to="/privacy"
+            className="mt-2 inline-block text-[11px] text-dream-muted/70 underline-offset-2 transition-colors hover:text-dream-purple hover:underline"
+          >
+            {t.common.privacy}
+          </Link>
+        </div>
       </aside>
 
       {/* Mobile top bar */}
@@ -140,7 +146,13 @@ export default function Layout() {
         <div className="mx-auto max-w-5xl">
           <Outlet />
           <footer className="mt-16 border-t border-dream-purple/15 pt-6 text-center text-xs text-dream-muted/70 lg:hidden">
-            {t.common.footer}
+            <p>{t.common.footer}</p>
+            <Link
+              to="/privacy"
+              className="mt-2 inline-block underline-offset-2 transition-colors hover:text-dream-purple hover:underline"
+            >
+              {t.common.privacy}
+            </Link>
           </footer>
         </div>
       </main>

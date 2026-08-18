@@ -88,8 +88,17 @@ src/
   data/            Bilingual game content (regions, abilities, bosses, …)
   components/      Layout, nav, language toggle, pixel stars, cards
   pages/           Home / World / Abilities / Bosses / Collectibles /
-                   Walkthrough / Guide / About
+                   Walkthrough / Guide / About / Privacy
 ```
+
+## Google AdSense 广告接入
+
+站点已预置 AdSense 基础设施（隐私政策页 `/privacy`、`ads.txt`、Auto Ads 挂载点）。审核通过后只需两步：
+
+1. 把 `public/ads.txt` 中的 `pub-0000000000000000` 替换为你的真实发布商 ID（数字部分）。
+2. 打开 `index.html`，取消 `<head>` 里 AdSense Auto Ads 脚本的注释，并把 `ca-pub-XXXXXXXXXXXXXXXX` 替换为真实 ID。
+
+改完直接 push 到 `main`，Vercel 会自动部署。
 
 ## License 许可
 

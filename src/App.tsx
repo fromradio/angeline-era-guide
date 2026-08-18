@@ -9,6 +9,7 @@ import CollectiblesPage from '@/pages/Collectibles'
 import WalkthroughPage from '@/pages/Walkthrough'
 import GuidePage from '@/pages/Guide'
 import AboutPage from '@/pages/About'
+import PrivacyPage from '@/pages/Privacy'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="walkthrough" element={<WalkthroughPage />} />
             <Route path="guide" element={<GuidePage />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="privacy" element={<PrivacyPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
