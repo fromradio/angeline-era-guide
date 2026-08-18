@@ -93,12 +93,13 @@ src/
 
 ## Google AdSense 广告接入
 
-站点已预置 AdSense 基础设施（隐私政策页 `/privacy`、`ads.txt`、Auto Ads 挂载点）。审核通过后只需两步：
+站点已接入 Google AdSense（发布商 ID：`ca-pub-6888017355561460`）：
 
-1. 把 `public/ads.txt` 中的 `pub-0000000000000000` 替换为你的真实发布商 ID（数字部分）。
-2. 打开 `index.html`，取消 `<head>` 里 AdSense Auto Ads 脚本的注释，并把 `ca-pub-XXXXXXXXXXXXXXXX` 替换为真实 ID。
+- `index.html` 含 `google-adsense-account` 验证 meta 与 Auto Ads 脚本
+- `public/ads.txt` 含真实授权记录
+- 隐私政策页 `/privacy` 已含广告 Cookie 声明
 
-改完直接 push 到 `main`，Vercel 会自动部署。
+审核通过前脚本已加载但 Google 不会投放广告，过审后 Auto Ads 自动开始展示。
 
 ## License 许可
 

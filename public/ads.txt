@@ -1,2 +1,1 @@
-# ads.txt — AdSense 审核通过后，将下面的占位 pub-ID 替换为你的真实发布商 ID（ca-pub-XXXXXXXXXXXXXXXX 中的数字部分）
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-6888017355561460, DIRECT, f08c47fec0942fa0
