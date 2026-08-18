@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://app-theta-one-56.vercel.app/sitemap.xml
+Sitemap: https://angeline-era.gameresearch.top/sitemap.xml

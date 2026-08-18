@@ -34,7 +34,7 @@ export default function HomePage() {
     '@type': 'WebSite',
     name: 'Angeline Era Guide',
     alternateName: 'Angeline Era 攻略站',
-    url: 'https://app-theta-one-56.vercel.app/',
+    url: 'https://angeline-era.gameresearch.top/',
     inLanguage: ['en', 'zh-CN'],
     description:
       'Unofficial bilingual fan guide for Angeline Era — world, abilities, bosses, collectibles and walkthrough.',
