@@ -12,6 +12,7 @@ import {
   Menu,
   X,
   Sparkle,
+  FlaskConical,
 } from 'lucide-react'
 import { useLanguage } from '@/i18n/LanguageContext'
 import LanguageToggle from './LanguageToggle'
@@ -91,6 +92,13 @@ export default function Layout() {
 
       {/* Desktop fixed sidebar */}
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col border-r border-dream-purple/15 bg-dream-bg/60 p-5 backdrop-blur-md lg:flex">
+        <a
+          href="https://gameresearch.top"
+          className="mb-4 flex items-center gap-1.5 rounded-full border border-dream-purple/20 px-2.5 py-1 text-[11px] text-dream-muted/60 transition-colors hover:border-dream-purple/50 hover:text-dream-purple"
+          title="GameResearch — player-made guide network"
+        >
+          <FlaskConical className="h-3 w-3" aria-hidden /> GameResearch
+        </a>
         <Brand />
         <NavLinks />
         <div className="mt-auto px-1 pt-6">
@@ -101,6 +109,12 @@ export default function Layout() {
           >
             {t.common.privacy}
           </Link>
+          <a
+            href="https://gameresearch.top"
+            className="mt-1.5 inline-block text-[11px] text-dream-muted/70 underline-offset-2 transition-colors hover:text-dream-purple hover:underline"
+          >
+            {lang === 'zh' ? '更多玩家自制攻略 → GameResearch' : 'More player-made guides → GameResearch'}
+          </a>
         </div>
       </aside>
 
