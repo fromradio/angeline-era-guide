@@ -29,13 +29,14 @@ const NAV_ITEMS = [
 ] as const
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const prefix = lang === 'zh' ? '/zh' : ''
   return (
     <nav className="flex flex-col gap-1" aria-label="Main">
       {NAV_ITEMS.map(({ to, icon: Icon, key }) => (
         <NavLink
           key={to}
-          to={to}
+          to={to === '/' ? prefix || '/' : `${prefix}${to}`}
           end={to === '/'}
           onClick={onNavigate}
           className={({ isActive }) =>
@@ -72,7 +73,8 @@ function Brand() {
 }
 
 export default function Layout() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const prefix = lang === 'zh' ? '/zh' : ''
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
 
@@ -94,7 +96,7 @@ export default function Layout() {
         <div className="mt-auto px-1 pt-6">
           <p className="text-[11px] leading-relaxed text-dream-muted/70">{t.common.footer}</p>
           <Link
-            to="/privacy"
+            to={`${prefix}/privacy`}
             className="mt-2 inline-block text-[11px] text-dream-muted/70 underline-offset-2 transition-colors hover:text-dream-purple hover:underline"
           >
             {t.common.privacy}
@@ -148,7 +150,7 @@ export default function Layout() {
           <footer className="mt-16 border-t border-dream-purple/15 pt-6 text-center text-xs text-dream-muted/70 lg:hidden">
             <p>{t.common.footer}</p>
             <Link
-              to="/privacy"
+              to={`${prefix}/privacy`}
               className="mt-2 inline-block underline-offset-2 transition-colors hover:text-dream-purple hover:underline"
             >
               {t.common.privacy}
